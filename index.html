@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Community Service – Staff &amp; Repair Portal</title>
+<link rel="icon" href="app_logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <!-- LOGIN -->
+  <section id="login">
+    <img src="app_logo.png" alt="" onerror="this.remove()">
+    <p class="sub">Staff &amp; Repair Portal</p>
+    <form id="loginForm" novalidate>
+      <div class="seg">
+        <label><input type="radio" name="role" value="staff" checked><span>Municipal Staff</span></label>
+        <label><input type="radio" name="role" value="repair"><span>Repair Team</span></label>
+      </div>
+      <label>Work Email</label>
+    <input id="email" type="email" placeholder="name@municipality.gov.za">
+      <div id="teamRow" hidden><label>Your repair team</label><select id="team"></select></div>
+      <label>Password</label>
+      <input id="pw" type="password" placeholder="At least 8 characters">
+      <p id="lerr" class="err"></p>
+      <button class="btn">Log In</button>
+    </form>
+  </section>
+  <!-- APP (both portals render here) -->
+  <section id="app" hidden>
+    <header><img src="app_logo.png" alt="Community Service logo"><span id="who"></span><button class="x" onclick="logout()">Log out</button></header>
+    <main id="view"></main>
+    <nav id="nav"></nav>
+  </section>
+</div>
+<script type="module" src="app.js"></script></body>
+</html>
